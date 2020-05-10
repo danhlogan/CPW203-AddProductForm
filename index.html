@@ -11,19 +11,20 @@
         <h1>D&D Character Creation Form</h1>
 
         <form>
-            <label for="playerName">Player Name:</label>
-            <input type="text" id="playerName">
-            <br>
+            <fieldset id = "playerName">
+                <legend>Player Name</legend>
+                <input type="text" id="playerName">
+                <br>
+            </fieldset>
+            
     
-            <fieldset>
+            <fieldset id="charInfo">
                 <legend>Character Info</legend>
                 <label for="charName">Character Name:</label>
-                <input type="text" id="charName"> 
-                <br>
+                <input type="text" id="charName">   
     
                 <label for="charLevel">Character Level:</label>
                 <input type="number" id="charLevel" min="1" max="20"> 
-                <br>
     
                 <label for="race">Choose your Race:</label>
                 <select id="race">
@@ -38,7 +39,7 @@
                     <option>Human</option>
                     <option>Tiefling</option>
                 </select>
-                <br>
+            
     
                 <label for="class">Choose your Class:</label>
                 <select id="class">
@@ -56,7 +57,7 @@
                     <option>Warlock</option>
                     <option>Wizard</option>
                 </select>
-                <br>
+                
     
                 <label>Choose your Alignment:</label>
                 <div>
@@ -83,33 +84,37 @@
            
            
 
-            <div id="abilities">
-                <fieldset>
+            <div id="abil">
+                <fieldset id="abilScores">
                     <legend>Abilitiy Scores</legend>
-                    <label for="str">Strength</label>
+                    <label for="str">Strength:</label>
                     <input type="number" id="str" min="8" max="20">
                     <br>
     
-                    <label for="dex">Dexterity</label>
+                    <label for="dex">Dexterity:</label>
                     <input type="number" id="dex" min="8" max="20">
                     <br>
     
-                    <label for="con">Constitution</label>
+                    <label for="con">Constitution:</label>
                     <input type="number" id="con" min="8" max="20">
                     <br>
     
-                    <label for="int">Intelligence</label>
+                    <label for="int">Intelligence:</label>
                     <input type="number" id="int" min="8" max="20">
                     <br>
     
-                    <label for="wis">Wisdom</label>
+                    <label for="wis">Wisdom:</label>
                     <input type="number" id="wis" min="8" max="20">
                     <br>
     
-                    <label for="charisma">Charisma</label>
+                    <label for="charisma">Charisma:</label>
                     <input type="number" id="charisma" min="8" max="20">
                 </fieldset>
             </div>
+            <br>
+
+            <button type="button">Submit</button>
+
         </form>
            
         <script src="js/main.js"></script>
