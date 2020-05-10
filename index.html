@@ -15,39 +15,103 @@
             <input type="text" id="playerName">
             <br>
     
-            <label for="charName">Character Name:</label>
-            <input type="text" id="charName"> 
-            <br>
-
-            <label for="class">Choose your Class:</label>
-            <select id="class">
-                <option selected disabled hidden>Character Classes</option>
-                <option>Barbarian</option>
-                <option>Bard</option>
-                <option>Cleric</option>
-                <option>Druid</option>
-                <option>Fighter</option>
-                <option>Monk</option>
-                <option>Paladin</option>
-                <option>Ranger</option>
-                <option>Rogue</option>
-                <option>Sorcerer</option>
-                <option>Warlock</option>
-                <option>Wizard</option>
-            </select>
-            <br>
-
-            <label for = "test">TESTEST</label>
-            <input type="checkbox" id="test">
-            <br>
-            
-            <input type="button" value="Process Form">
-
-
-        </form>
-       
-
+            <fieldset>
+                <legend>Character Info</legend>
+                <label for="charName">Character Name:</label>
+                <input type="text" id="charName"> 
+                <br>
+    
+                <label for="charLevel">Character Level:</label>
+                <input type="number" id="charLevel" min="1" max="20"> 
+                <br>
+    
+                <label for="race">Choose your Race:</label>
+                <select id="race">
+                    <option selected disabled hidden>Races</option>
+                    <option>Dragonborn</option>
+                    <option>Dwarf</option>
+                    <option>Elf</option>
+                    <option>Gnome</option>
+                    <option>Half-Elf</option>
+                    <option>Halfling</option>
+                    <option>Half-Orc</option>
+                    <option>Human</option>
+                    <option>Tiefling</option>
+                </select>
+                <br>
+    
+                <label for="class">Choose your Class:</label>
+                <select id="class">
+                    <option selected disabled hidden>Character Classes</option>
+                    <option>Barbarian</option>
+                    <option>Bard</option>
+                    <option>Cleric</option>
+                    <option>Druid</option>
+                    <option>Fighter</option>
+                    <option>Monk</option>
+                    <option>Paladin</option>
+                    <option>Ranger</option>
+                    <option>Rogue</option>
+                    <option>Sorcerer</option>
+                    <option>Warlock</option>
+                    <option>Wizard</option>
+                </select>
+                <br>
+    
+                <label>Choose your Alignment:</label>
+                <div>
+                    <input type="radio" id="lawful" name="law">
+                    <label for="lawful">Lawful</label>
+    
+                    <input type="radio" id="neutral" name="law">
+                    <label for="neutral">Neutral</label>
+    
+                    <input type="radio" id="chaotic" name="law">
+                    <label for="chaotic">Chaotic</label>
+                </div> 
+                <div>
+                    <input type="radio" id="good" name="align">
+                    <label for="good">Good</label>
         
+                    <input type="radio" id="neutral2" name="align">
+                    <label for="neutral2">Neutral</label>
+        
+                    <input type="radio" id="evil" name="align">
+                    <label for="evil">Evil</label>  
+                </div>    
+            </fieldset>
+           
+           
+
+            <div id="abilities">
+                <fieldset>
+                    <legend>Abilitiy Scores</legend>
+                    <label for="str">Strength</label>
+                    <input type="number" id="str" min="8" max="20">
+                    <br>
+    
+                    <label for="dex">Dexterity</label>
+                    <input type="number" id="dex" min="8" max="20">
+                    <br>
+    
+                    <label for="con">Constitution</label>
+                    <input type="number" id="con" min="8" max="20">
+                    <br>
+    
+                    <label for="int">Intelligence</label>
+                    <input type="number" id="int" min="8" max="20">
+                    <br>
+    
+                    <label for="wis">Wisdom</label>
+                    <input type="number" id="wis" min="8" max="20">
+                    <br>
+    
+                    <label for="charisma">Charisma</label>
+                    <input type="number" id="charisma" min="8" max="20">
+                </fieldset>
+            </div>
+        </form>
+           
         <script src="js/main.js"></script>
 </body>
 </html>

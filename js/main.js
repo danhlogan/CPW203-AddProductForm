@@ -17,6 +17,9 @@ function isAllDataValid() {
     return true;
 }
 function getPageInfo() {
+    var form = new PlayerCharacter();
+    form.playerName = document.getElementById("playerName").value;
+    form.charName = document.getElementById("charName").value;
 }
 function displayInfo() {
 }

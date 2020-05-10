@@ -7,8 +7,6 @@ class PlayerCharacter
     test: boolean;
 }
 
-// let PlayerChar= new PlayerCharacter()
-
 window.onload = function()
 {
     let addBtn = <HTMLElement> document.querySelector("input[type=button]")
@@ -23,16 +21,21 @@ function submitInfo()
         let pageInfo = getPageInfo()
         displayInfo(pageInfo)
     }
+
 }
 
+// Validates form data
 function isAllDataValid()
 {
     return true;
 }
 
-function getPageInfo()
+// Fetches form data
+function getPageInfo():PlayerCharacter
 {
-
+    let form  = new PlayerCharacter()
+    form.playerName = (<HTMLInputElement> document.getElementById("playerName")).value
+    form.charName = (<HTMLInputElement> document.getElementById("charName")).value
 }
 
 function displayInfo()
