@@ -16,14 +16,11 @@ fieldset#charInfo
 
 fieldset#charInfo > label
 {
-    border: 1px solid blue;
-    margin: 3%;
+    clear: left;
+    display: inline-block;
+    text-align: left;
+    margin: 2%;     
 }
-
-
-fieldset#charInfo > input
-{
-} 
 
 fieldset#abilScores
 {
@@ -36,14 +33,13 @@ fieldset#abilScores > label
     clear: left;
     display: inline-block;
     float: left;
+    margin: 3%;
     text-align: left;
     width: 30%;
-    margin: 3%;
 }
 
 fieldset#abilScores > input 
 {
-  border: 1px solid blue;
   display: inline-block;
   float: right;
   margin: 2.5%;
