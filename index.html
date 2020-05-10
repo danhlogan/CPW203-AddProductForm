@@ -11,7 +11,7 @@
         <h1>D&D Character Creation Form</h1>
 
         <form>
-            <fieldset id = "playerName">
+            <fieldset id = "playerNameFS">
                 <legend>Player Name</legend>
                 <input type="text" id="playerName">
                 <br>
@@ -62,29 +62,27 @@
                 
                 <label>Choose your Alignment:</label>
                 <div>
-                    <input type="radio" id="lawful" name="law">
+                    <input type="radio" id="lawful" name="law" value="Lawful">
                     <label for="lawful">Lawful</label>
     
-                    <input type="radio" id="neutral" name="law">
+                    <input type="radio" id="neutral" name="law" value="Neutral">
                     <label for="neutral">Neutral</label>
     
-                    <input type="radio" id="chaotic" name="law">
+                    <input type="radio" id="chaotic" name="law" value="Chaotic">
                     <label for="chaotic">Chaotic</label>
                 </div> 
                 <div>
-                    <input type="radio" id="good" name="align">
+                    <input type="radio" id="good" name="align" value="Good">
                     <label for="good">Good</label>
         
-                    <input type="radio" id="neutral2" name="align">
+                    <input type="radio" id="neutral2" name="align" value="Neutral">
                     <label for="neutral2">Neutral</label>
         
-                    <input type="radio" id="evil" name="align">
+                    <input type="radio" id="evil" name="align" value="Evil">
                     <label for="evil">Evil</label>  
                 </div>    
             </fieldset>
            
-           
-
             <div id="abil">
                 <fieldset id="abilScores">
                     <legend>Abilitiy Scores</legend>

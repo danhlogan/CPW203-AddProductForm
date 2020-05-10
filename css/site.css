@@ -3,7 +3,7 @@ html
     font-family: Arial, Helvetica, sans-serif;
 }
 
-fieldset#playerName
+fieldset#playerNameFS
 {
     width: 325px;
 }
@@ -18,8 +18,8 @@ fieldset#charInfo > label
 {
     clear: left;
     display: inline-block;
-    text-align: left;
     margin: 2%;     
+    text-align: left;
 }
 
 fieldset#abilScores
