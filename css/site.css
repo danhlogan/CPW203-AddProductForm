@@ -5,18 +5,43 @@ html
 
 fieldset#playerNameFS
 {
-    width: 325px;
+    width: 170px
+}
+
+span
+{
+    color: rgb(121, 121, 121);
+    float: right;
+    font-size: 14px;
+    font-style: italic;
+    margin-right: 2%;
+    margin-top: 2%;
+    text-align: right;
+}
+
+span#nameSpan
+{
+    margin-top: 0%;
+}
+
+span#lawSpan
+{
+    margin-top: -15px; 
+}
+
+span#alignSpan
+{
+    margin-top: -10px;
 }
 
 fieldset#charInfo
 {
-    width: 325px;
+    width: 320px;
     margin-top: 2%;  
 }
 
 fieldset#charInfo > label
 {
-    clear: left;
     display: inline-block;
     margin: 2%;     
     text-align: left;

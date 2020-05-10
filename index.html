@@ -14,17 +14,20 @@
             <fieldset id = "playerNameFS">
                 <legend>Player Name</legend>
                 <input type="text" id="playerName">
+                <span id="nameSpan"></span>
                 <br>
             </fieldset>
-            
+
             <fieldset id="charInfo">
                 <legend>Character Info</legend>
                 <label for="charName">Character Name:</label>
                 <input type="text" id="charName">
+                <span id="charNameSpan"></span>
                 <br> 
     
                 <label for="charLevel">Character Level:</label>
                 <input type="number" id="charLevel" min="1" max="20"> 
+                <span id="levelSpan"></span>
                 <br>
     
                 <label for="race">Choose your Race:</label>
@@ -40,6 +43,7 @@
                     <option>Human</option>
                     <option>Tiefling</option>
                 </select>
+                <span id="raceSpan"></span>
                 <br>
   
                 <label for="class">Choose your Class:</label>
@@ -58,19 +62,23 @@
                     <option>Warlock</option>
                     <option>Wizard</option>
                 </select>
+                <span id="classSpan"></span>
                 <br>
                 
                 <label>Choose your Alignment:</label>
                 <div>
                     <input type="radio" id="lawful" name="law" value="Lawful">
                     <label for="lawful">Lawful</label>
-    
+                
                     <input type="radio" id="neutral" name="law" value="Neutral">
                     <label for="neutral">Neutral</label>
     
                     <input type="radio" id="chaotic" name="law" value="Chaotic">
                     <label for="chaotic">Chaotic</label>
                 </div> 
+                <span id="lawSpan"></span>
+                
+
                 <div>
                     <input type="radio" id="good" name="align" value="Good">
                     <label for="good">Good</label>
@@ -79,8 +87,9 @@
                     <label for="neutral2">Neutral</label>
         
                     <input type="radio" id="evil" name="align" value="Evil">
-                    <label for="evil">Evil</label>  
+                    <label for="evil">Evil</label> 
                 </div>    
+                <span id="alignSpan"></span>
             </fieldset>
            
             <div id="abil">
@@ -88,26 +97,33 @@
                     <legend>Abilitiy Scores</legend>
                     <label for="str">Strength:</label>
                     <input type="number" id="str" min="8" max="20">
+                    <span id="strSpan"></span>
+                    
                     <br>
     
                     <label for="dex">Dexterity:</label>
                     <input type="number" id="dex" min="8" max="20">
+                    <span id="dexSpan"></span>
                     <br>
     
                     <label for="con">Constitution:</label>
                     <input type="number" id="con" min="8" max="20">
+                    <span id="conSpan"></span>
                     <br>
     
                     <label for="int">Intelligence:</label>
                     <input type="number" id="int" min="8" max="20">
+                    <span id="intSpan"></span>
                     <br>
     
                     <label for="wis">Wisdom:</label>
                     <input type="number" id="wis" min="8" max="20">
+                    <span id="wisSpan"></span>
                     <br>
     
                     <label for="charisma">Charisma:</label>
                     <input type="number" id="charisma" min="8" max="20">
+                    <span id="charismaSpan"></span>
                 </fieldset>
             </div>
             <br>
@@ -115,6 +131,8 @@
             <button type="button">Submit</button>
 
         </form>
+
+        <div id="displayMessage"></div>
            
         <script src="js/main.js"></script>
 </body>
