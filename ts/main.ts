@@ -107,42 +107,43 @@ function isAllDataValid():boolean
             flag = false 
         }
 
-        if(vStr == "")
+        if(vStr == "" || parseInt(vStr) < 8 || parseInt(vStr) > 20)
         {
             document.getElementById("strSpan").innerText = "Enter number 8 - 20"
             document.getElementById("abilScores").style.width = "350px"
+            
             flag = false  
         }
 
-        if(vDex == "")
+        if(vDex == "" || parseInt(vDex) < 8 || parseInt(vDex) > 20)
         {
             document.getElementById("dexSpan").innerText = "Enter number 8 - 20"
             document.getElementById("abilScores").style.width = "350px"
             flag = false  
         }
 
-        if(vCon == "")
+        if(vCon == "" || parseInt(vCon) < 8 || parseInt(vCon) > 20)
         {
             document.getElementById("conSpan").innerText = "Enter number 8 - 20"
             document.getElementById("abilScores").style.width = "350px"
             flag = false  
         }
 
-        if(vInt == "")
+        if(vInt == "" || parseInt(vInt) < 8 || parseInt(vInt) > 20)
         {
             document.getElementById("intSpan").innerText = "Enter number 8 - 20"
             document.getElementById("abilScores").style.width = "350px"
             flag = false  
         }
 
-        if(vWis == "")
+        if(vWis == "" || parseInt(vWis) < 8 || parseInt(vWis) > 20)
         {
             document.getElementById("wisSpan").innerText = "Enter number 8 - 20"
             document.getElementById("abilScores").style.width = "350px"
             flag = false  
         }
 
-        if(vCharisma == "")
+        if(vCharisma == "" || parseInt(vCharisma) < 8 || parseInt(vCharisma) > 20)
         {
             document.getElementById("charismaSpan").innerText = "Enter number 8 - 20"
             document.getElementById("abilScores").style.width = "350px"
