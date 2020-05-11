@@ -17,8 +17,10 @@ class PlayerCharacter
 
 window.onload = function()
 {
-    let addBtn = <HTMLElement> document.querySelector("button")
-    addBtn.onclick = submitInfo
+    let addBtnSub = <HTMLElement> document.querySelector("button#submit")
+    let addBtnClear = <HTMLElement> document.querySelector("button#clear")
+    addBtnSub.onclick = submitInfo
+    addBtnClear.onclick = clearForm
 }
 
 // Main  
@@ -171,6 +173,42 @@ function getPageInfo():PlayerCharacter
 
 function displayInfo(form:PlayerCharacter):void
 {
+    document.querySelector("h3").innerText = form.playerName
+}
 
+function clearForm():void
+{
+    var spanList = document.querySelectorAll("span")
+    for(let i = 0; i < spanList.length; i++)
+    {
+        spanList[i].innerText = ""
+    }
+
+    var numList = document.querySelectorAll('input[type="number"]')
+    for(let i = 0; i < numList.length; i++)
+    {
+        numList[i].value = ""
+    }
+
+    var radioList = document.querySelectorAll('input[type="radio"]')
+    for(let i = 0; i < radioList.length; i++)
+    {
+        radioList[i].checked = false
+    }
+
+    var textList = document.querySelectorAll('input[type="text"]')
+    for(let i = 0; i < textList.length; i++)
+    {
+        textList[i].value= ""
+    }
+
+    var selectList = document.querySelectorAll("option")
+    for(let i = 0; i < selectList.length; i++)
+    {
+        selectList[i].selected = selectList[i].defaultSelected
+    }
+
+    document.getElementById("charInfo").style.width = "320px"
+    document.getElementById("abilScores").style.width = "200px"
 }
 

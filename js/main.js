@@ -4,8 +4,10 @@ var PlayerCharacter = (function () {
     return PlayerCharacter;
 }());
 window.onload = function () {
-    var addBtn = document.querySelector("button");
-    addBtn.onclick = submitInfo;
+    var addBtnSub = document.querySelector("button#submit");
+    var addBtnClear = document.querySelector("button#clear");
+    addBtnSub.onclick = submitInfo;
+    addBtnClear.onclick = clearForm;
 };
 function submitInfo() {
     if (isAllDataValid()) {
@@ -113,4 +115,29 @@ function getPageInfo() {
     return form;
 }
 function displayInfo(form) {
+    document.querySelector("h3").innerText = form.playerName;
+}
+function clearForm() {
+    var spanList = document.querySelectorAll("span");
+    for (var i = 0; i < spanList.length; i++) {
+        spanList[i].innerText = "";
+    }
+    var numList = document.querySelectorAll('input[type="number"]');
+    for (var i = 0; i < numList.length; i++) {
+        numList[i].value = "";
+    }
+    var radioList = document.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radioList.length; i++) {
+        radioList[i].checked = false;
+    }
+    var textList = document.querySelectorAll('input[type="text"]');
+    for (var i = 0; i < textList.length; i++) {
+        textList[i].value = "";
+    }
+    var selectList = document.querySelectorAll("option");
+    for (var i = 0; i < selectList.length; i++) {
+        selectList[i].selected = selectList[i].defaultSelected;
+    }
+    document.getElementById("charInfo").style.width = "320px";
+    document.getElementById("abilScores").style.width = "200px";
 }
