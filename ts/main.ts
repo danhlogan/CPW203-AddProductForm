@@ -20,7 +20,7 @@ window.onload = function()
     let addBtnSub = <HTMLElement> document.querySelector("button#submit")
     let addBtnClear = <HTMLElement> document.querySelector("button#clear")
     addBtnSub.onclick = submitInfo
-    addBtnClear.onclick = clearForm
+    addBtnClear.onclick = clearAll
 }
 
 // Main  
@@ -30,12 +30,9 @@ function submitInfo():void
     {
         let pageInfo = getPageInfo()
         displayInfo(pageInfo)
+        clearForm()
     }
 
-    if(!isAllDataValid())
-    {
-        //alert("TEST!")
-    }
 }
 
 // Validates form 
@@ -55,6 +52,12 @@ function isAllDataValid():boolean
         let vWis = (<HTMLInputElement> document.getElementById("wis")).value
         let vCharisma = (<HTMLInputElement> document.getElementById("charisma")).value
         
+        var spanList = document.querySelectorAll("span")
+        for(let i = 0; i < spanList.length; i++)
+        {
+            spanList[i].innerText = ""
+        }
+
         if(vPlayerName == "")
         {
             document.getElementById("nameSpan").innerText = "Please enter your name"
@@ -178,7 +181,7 @@ function displayInfo(form:PlayerCharacter):void
 
     document.querySelector("p").innerHTML =
     "Your character, " + form.charName + ", is a level " + form.charLevel + " " + form.race + " "
-    + form.class + ". They are " + form.law + " " + form.align + " in nature." + 
+    + form.class + ". Their nature is " + form.law + " " + form.align + "." + 
     "<br>Your ability scores are:" + 
     "<br> Strength - " + form.str +
     "<br> Dexterity - " + form.dex +
@@ -219,11 +222,20 @@ function clearForm():void
     {
         selectList[i].selected = selectList[i].defaultSelected
     }
-
-    document.querySelector("h3").innerText = ""
-    document.querySelector("p").innerText = ""
-
+    
     document.getElementById("charInfo").style.width = "320px"
-    document.getElementById("abilScores").style.width = "200px"
+    document.getElementById("abilScores").style.width = "200px" 
+}
+
+function clearHeading():void
+{
+    document.querySelector("h3").innerText = ""
+    document.querySelector("p").innerText = "" 
+}
+
+function clearAll():void
+{
+    clearForm()
+    clearHeading()
 }
 

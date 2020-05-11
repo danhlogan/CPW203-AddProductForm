@@ -75,6 +75,11 @@ button#clear
     margin-left: 1%;
 }
 
+button:hover
+{
+    cursor: pointer;
+}
+
 
 
 

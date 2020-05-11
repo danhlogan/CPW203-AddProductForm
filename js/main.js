@@ -7,14 +7,13 @@ window.onload = function () {
     var addBtnSub = document.querySelector("button#submit");
     var addBtnClear = document.querySelector("button#clear");
     addBtnSub.onclick = submitInfo;
-    addBtnClear.onclick = clearForm;
+    addBtnClear.onclick = clearAll;
 };
 function submitInfo() {
     if (isAllDataValid()) {
         var pageInfo = getPageInfo();
         displayInfo(pageInfo);
-    }
-    if (!isAllDataValid()) {
+        clearForm();
     }
 }
 function isAllDataValid() {
@@ -30,6 +29,10 @@ function isAllDataValid() {
     var vInt = document.getElementById("int").value;
     var vWis = document.getElementById("wis").value;
     var vCharisma = document.getElementById("charisma").value;
+    var spanList = document.querySelectorAll("span");
+    for (var i = 0; i < spanList.length; i++) {
+        spanList[i].innerText = "";
+    }
     if (vPlayerName == "") {
         document.getElementById("nameSpan").innerText = "Please enter your name";
         document.getElementById("playerNameFS").style.width = "350px";
@@ -119,7 +122,7 @@ function displayInfo(form) {
         "Welcome to the wonderful world of Dungeons and Dragons, " + form.playerName + "!";
     document.querySelector("p").innerHTML =
         "Your character, " + form.charName + ", is a level " + form.charLevel + " " + form.race + " "
-            + form.class + ". They are " + form.law + " " + form.align + " in nature." +
+            + form.class + ". Their nature is " + form.law + " " + form.align + "." +
             "<br>Your ability scores are:" +
             "<br> Strength - " + form.str +
             "<br> Dexterity - " + form.dex +
@@ -149,8 +152,14 @@ function clearForm() {
     for (var i = 0; i < selectList.length; i++) {
         selectList[i].selected = selectList[i].defaultSelected;
     }
-    document.querySelector("h3").innerText = "";
-    document.querySelector("p").innerText = "";
     document.getElementById("charInfo").style.width = "320px";
     document.getElementById("abilScores").style.width = "200px";
+}
+function clearHeading() {
+    document.querySelector("h3").innerText = "";
+    document.querySelector("p").innerText = "";
+}
+function clearAll() {
+    clearForm();
+    clearHeading();
 }
