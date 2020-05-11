@@ -115,7 +115,18 @@ function getPageInfo() {
     return form;
 }
 function displayInfo(form) {
-    document.querySelector("h3").innerText = form.playerName;
+    document.querySelector("h3").innerText =
+        "Welcome to the wonderful world of Dungeons and Dragons, " + form.playerName + "!";
+    document.querySelector("p").innerHTML =
+        "Your character, " + form.charName + ", is a level " + form.charLevel + " " + form.race + " "
+            + form.class + ". They are " + form.law + " " + form.align + " in nature." +
+            "<br>Your ability scores are:" +
+            "<br> Strength - " + form.str +
+            "<br> Dexterity - " + form.dex +
+            "<br> Constitution - " + form.con +
+            "<br> Intelligence - " + form.int +
+            "<br> Wisdom - " + form.wis +
+            "<br> Charisma - " + form.charisma;
 }
 function clearForm() {
     var spanList = document.querySelectorAll("span");
@@ -138,6 +149,8 @@ function clearForm() {
     for (var i = 0; i < selectList.length; i++) {
         selectList[i].selected = selectList[i].defaultSelected;
     }
+    document.querySelector("h3").innerText = "";
+    document.querySelector("p").innerText = "";
     document.getElementById("charInfo").style.width = "320px";
     document.getElementById("abilScores").style.width = "200px";
 }
